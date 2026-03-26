@@ -1,0 +1,26 @@
+@media (max-width: 900px) {
+  .board-shell {
+    width: 99vw;
+    height: 95vh;
+    border-radius: 22px;
+  }
+
+  .boot-message {
+    font-size: 0.68rem;
+    letter-spacing: 0.06em;
+  }
+}
+
+@media (orientation: portrait) {
+  .board-shell {
+    width: 96vw;
+    height: min(92vh, 96vw * 1.65);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tile__glyph,
+  .boot-message {
+    transition: none !important;
+  }
+}

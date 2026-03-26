@@ -1,0 +1,25 @@
+.board {
+  perspective: 1200px;
+  transform-style: preserve-3d;
+}
+
+.board.is-transitioning .tile {
+  transition-duration: 420ms;
+}
+
+.board.is-transitioning .tile__glyph {
+  text-shadow:
+    0 0 14px rgba(255,255,255,0.12),
+    0 1px 0 rgba(255,255,255,0.08);
+}
+
+.board[data-rows]::before {
+  content: "";
+  grid-column: 1 / -1;
+  grid-row: 1 / -1;
+  pointer-events: none;
+  border-radius: inherit;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.03),
+    inset 0 0 0 2px rgba(0,0,0,0.85);
+}
